@@ -7,7 +7,7 @@ const inputTwo = document.getElementById("input-two")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-const savebtn = document.getElementById("save-btn")
+const saveBtn = document.getElementById("save-btn")
 //converting string to its original form  and storing it in a local variable
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
@@ -19,13 +19,13 @@ if (leadsFromLocalStorage) {
     render(myLeads)
 }
 
-savebtn.addEventListener("click", function(){
-    chrome.tabs.query({active:true, currentwindow:true}, function(tabs){
-        myLeads.push({
-         url: tabs[0].url, 
-         type: inputTwo.value
-})
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+saveBtn.addEventListener("click", function(){    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push ({
+            url: tabs[0].url, 
+            type: inputTwo.value
+   })
+        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
         render(myLeads)
     })
 })
