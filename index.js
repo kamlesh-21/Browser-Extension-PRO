@@ -48,7 +48,7 @@ function render(leads) {
         </li>`
         
         };
-       //changing the UL element with local variable in HTML form
+    //changing the UL element with local variable in HTML form
     ulEl.innerHTML = listItems
     console.log(listItems)
 }
