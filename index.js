@@ -44,7 +44,7 @@ function render(leads) {
             <a href=
                 ${(leads[i].url)} target="_blank"> ${(leads[i].url)} 
             </a>
-            ${(leads[i].type)}
+             - ${(leads[i].type)}
         </li>`
         
         };
@@ -77,3 +77,4 @@ inputBtn.addEventListener("click", function(){
     //calling function to display saved inputs
     render(myLeads)
 })
+

@@ -36,10 +36,29 @@ input {
 }
 
 button {
+    background: #055087;
     color: white;
-    background-color: #055087;
-    padding: 12px 20px;
-    margin-top: 5px;
-    border: none;
+    padding: 10px 20px;
+    border: 1px solid #055087;
     font-weight: bold;
+}
+
+#delete-btn {
+    background: rgb(255, 255, 255);
+    color: red;
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 5px;
+    font-size: large;
+}
+
+a {
+    color: blue;
 }
