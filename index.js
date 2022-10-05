@@ -47,10 +47,11 @@ function render(leads) {
              - ${(leads[i].type)}
         </li>`
         
-        };
+        }
     //changing the UL element with local variable in HTML form
     ulEl.innerHTML = listItems
-    console.log(listItems)
+    inputTwo.value = ""
+   
 }
 
 
