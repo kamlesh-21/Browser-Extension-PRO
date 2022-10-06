@@ -44,14 +44,15 @@ function render(leads) {
             <a href=
                 ${(leads[i].url)} target="_blank"> ${(leads[i].url)} 
             </a>
-             - ${(leads[i].type)}
+             - ${(leads[i].type)} 
         </li>`
         
         }
     //changing the UL element with local variable in HTML form
+   
     ulEl.innerHTML = listItems
     inputTwo.value = ""
-   
+    
 }
 
 
