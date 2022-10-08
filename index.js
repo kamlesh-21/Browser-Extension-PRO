@@ -7,6 +7,7 @@ const inputTwo = document.getElementById("input-two")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
+const removeBtn = document.getElementById("remove-btn")
 const saveBtn = document.getElementById("save-btn")
 //converting string to its original form  and storing it in a local variable
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
@@ -60,6 +61,13 @@ function render(leads) {
 deleteBtn.addEventListener("dblclick", function(){
     localStorage.clear()
     myLeads = []
+    render(myLeads)
+})
+
+removeBtn.addEventListener("click", function(){
+    localStorage.clear()
+    myLeads.pop()
+    localStorage.setItem('myLeads',JSON.stringify(myLeads));
     render(myLeads)
 })
 
